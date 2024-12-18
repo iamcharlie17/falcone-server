@@ -6,7 +6,7 @@ const fs = require("fs");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 const app = express();
-const port = process.env.PORT || 3100;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
@@ -238,6 +238,6 @@ app.get("/", (req, res) => {
   res.send("Server is running!");
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0' ,() => {
   console.log(`Server is running on ${port}`);
 });
