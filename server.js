@@ -62,7 +62,7 @@ const upload = multer({
 
 const run = async () => {
   try {
-    await client.connect();
+    // await client.connect();
     const database = client.db("FalconaDB");
     const contactCollection = database.collection("contactCollection");
     const careersCollection = database.collection("careersCollection");
