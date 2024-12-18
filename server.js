@@ -6,7 +6,7 @@ const fs = require("fs");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 const app = express();
-const port = process.env.PORT || 3100;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
@@ -62,7 +62,7 @@ const upload = multer({
 
 const run = async () => {
   try {
-    // await client.connect();
+    await client.connect();
     const database = client.db("FalconaDB");
     const contactCollection = database.collection("contactCollection");
     const careersCollection = database.collection("careersCollection");
