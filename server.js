@@ -6,7 +6,7 @@ const fs = require("fs");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3100;
 
 // Middleware
 app.use(express.json());
